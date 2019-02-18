@@ -1,6 +1,8 @@
 const express = require('express');
 let app = express();
 
+let fortune = require('./lib/fortune');
+
 let handlebars = require('express3-handlebars').create({defaultLayout: 'main'});
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -9,36 +11,12 @@ app.set('port', process.env.PORT || 2333);
 
 app.use(express.static(__dirname + '/public'));
 
-// Virtual data
-const fortunes = [
-  'javascript',
-  'node',
-  'express',
-  'ruby',
-  'goland',
-  'java',
-  'angualar',
-  'vue',
-  'react',
-  'webpack',
-  'gulp',
-  'commonjs',
-  'amd',
-  'cmd',
-  'es6',
-  'koa2',
-  'eggjs',
-  'mongodb',
-  'redis',
-];
-
 app.get('/', (req, res) => {
   res.render('home');
 })
 
 app.get('/about', (req, res) => {
-  let randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)];
-  res.render('about', { fortunes: randomFortune });
+  res.render('about', { fortunes: fortune.getFortune() });
 })
 
 // 定制404页面
