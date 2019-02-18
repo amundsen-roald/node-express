@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/amundsen-roald/node-express#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express3-handlebars": "^0.5.2"
   }
 }
