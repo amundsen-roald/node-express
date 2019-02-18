@@ -27,6 +27,14 @@ app.get('/about', (req, res) => {
   });
 })
 
+app.get('/tours/hood-river', (req, res) => {
+  res.render('tours/hood-river');
+})
+
+app.get('/tours/request-group-rate', (req, res) => {
+  res.render('tours/request-group-rate');
+})
+
 // 定制404页面
 app.use((req, res) => {
   res.status(404);
