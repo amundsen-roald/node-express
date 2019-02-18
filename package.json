@@ -1,0 +1,22 @@
+{
+  "name": "express-learn",
+  "version": "1.0.0",
+  "description": "learn node and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amundsen-roald/node-express.git"
+  },
+  "author": "Amundsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amundsen-roald/node-express/issues"
+  },
+  "homepage": "https://github.com/amundsen-roald/node-express#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
